@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blog', 'BlogController@index');
+Route::post('/blog', 'BlogController@store');
+Route::get('/blog/create', 'BlogController@create');
+Route::get('/blog/{id}', 'BlogController@show');
+Route::delete('/blog/{id}', 'BlogController@destroy');
+Route::patch('/blog/{id}', 'BlogController@update');
+
